@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/cb44fa7420.js" crossorigin="anonymous"></script> <!--아이콘사이트 연결-->
+    <title>함께식단_활동대사량</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+
+        * {
+            list-style: none;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 27px;
+            line-height: 33px;
+
+            color: #000000;
+        }
+
+        #search {
+            position: absolute;
+            width: 643px;
+            height: 63px;
+            left: 182px;
+            top: 370px;
+
+            background: #EAE8E8;
+            border-radius: 10px;
+        }
+
+        li {
+            box-sizing: border-box;
+
+            position: absolute;
+            width: 643px;
+            height: 65px;
+            left: 182px;
+
+            background: rgba(255, 255, 255, 0.5);
+            border: 3px solid #48DB4E;
+            border-radius: 10px;
+
+            line-height: 65px;
+            text-align: justify;
+        }
+
+
+        #select {
+
+            box-sizing: border-box;
+
+            position: absolute;
+            width: 368px;
+            height: 458px;
+            left: 873px;
+            top: 364px;
+
+            background: #FFFFFF;
+            border: 3px solid #48DB4E;
+            border-radius: 10px;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 27px;
+            line-height: 33px;
+
+            color: #000000;
+        }
+
+        #complete {
+            box-sizing: border-box;
+
+            position: absolute;
+            width: 109px;
+            height: 87px;
+            left: 1251px;
+            top: 880px;
+
+            background: rgba(72, 219, 78, 0.5);
+            border: 3px solid #48DB4E;
+            border-radius: 10px;
+        }
+
+        button {
+            border: none;
+            background-color: #FFFFFF;
+
+            position: absolute;
+            width: 35.69px;
+            height: 46px;
+            left: 590px;
+            top: 8px;
+        }
+
+        #search_input {
+            position: absolute;
+            width: 643px;
+            height: 63px;
+            left: 15px;
+            top: 0px;
+        }
+
+        #text {
+            position: absolute;
+            width: 643px;
+            height: 63px;
+            left: 15px;
+            top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <!-- 로고 영역 -->
+
+        </div>
+        <nav>
+            <!-- 네비게이션바 -->
+
+        </nav>
+    </header>
+    <main>
+        <div id="search">
+            <!-- 활동검색 -->
+            <input id="search_input" type="search" placeholder="활동을 추가하세요."
+                style="border:none; background: transparent; ">
+            <button type="submit" style="background: transparent;"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div>
+            <!-- 활동 목록 -->
+            <ul>
+                <li style="top: 448px;">
+                    <div id="text">운동</div><button type="button"><i class="fa-solid fa-plus"></i></button>
+                </li>
+                <li style="top: 525px;">
+                    <div id="text">취침</div><button type="button"><i class="fa-solid fa-plus"></i></button>
+                </li>
+                <li style="top: 601px;">
+                    <div id="text">식사</div><button type="button"><i class="fa-solid fa-plus"></i></button>
+                </li>
+                <li style="top: 678px;">
+                    <div id="text">앉아있기</div><button type="button"><i class="fa-solid fa-plus"></i></button>
+                </li>
+                <li style="top: 754px;">
+                    <div id="text">버스로 출퇴근하기</div><button type="button"><i class="fa-solid fa-plus"></i></button>
+                </li>
+            </ul>
+        </div>
+        <div id="select">
+            <!-- 선택활동 목록 -->
+            <h3 style="text-align: center;">선택한 활동</h3>
+            <ul>
+                <li style="position: absolute;
+                width: 331px;
+                height: 0px;
+                left: 15px;
+                top: 70px;
+                border: 0.5px solid #000000;
+                transform: rotate(-0.17deg);"></li>
+                <li style="position: absolute;
+                width: 292px;
+                height: 40px;
+                left: 20px;
+                top: 70px;
+                border:none;
+                ">누워있기<button type="button" style="position: absolute;
+                    width: 30px;
+                    height: 3px;
+                    left: 270px;
+                    top: 10px;
+                    "><i class="fa-solid fa-minus"></i></button></li>
+            </ul>
+        </div>
+        <div id="complete">
+            <!-- 제출버튼 -->
+            <button type="submit" style="background-color: transparent; position: absolute;
+            width: 72px;
+            height: 49px;
+            left: 17px;
+            top: 20px;
+            ">완료</button>
+        </div>
+    </main>
+</body>
+
+</html>
