@@ -1,0 +1,110 @@
+
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
+*{
+    text-decoration-line: none;
+    color: inherit;   
+}
+#title{ /*함께식단*/
+    width: 239px;
+    height: 82px;
+    left: 50px;
+    top: 28px;
+    position:absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 42px;
+    color: #000000;
+}
+
+#nav-underline {
+    position: absolute;
+  
+    height: 4px;
+  
+    background-color: olive;
+  
+    transition: .6s ease-out;
+  }
+
+#nav ul:first-child{ /*선택 li 진회색*/
+    color: #536152;
+}
+
+#nav1{text-align:center}
+#nav1> div ul{
+    display:inline-block;
+    list-style-type: none;
+    background-color: #fff;
+    padding-top: 100px;
+}
+
+
+#nav div ul li:not(:first-of-type){
+    color: rgba(83, 97, 82, 0.6);
+    
+}
+#nav div #ul1{
+    padding-left:1px;
+    
+}
+
+#nav1 div >ul li{
+    /*
+    width: 201px;
+    height: 45px;
+    left: 216px;
+    top: 181px;
+*/
+    float:left;
+    padding:0 20px;
+    line-height:80px;
+    padding-left: 150px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 42px;
+    text-align: center;
+    cursor: pointer;
+  
+}
+
+
+
+
+
+
+/*navigator 구분선*/
+#rect1{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1px;
+
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+
+}
+/*li 밑의 초록선*/
+
+.green_rect{
+    
+    width: 247px;
+    height: 7px;
+   
+
+    float:left;
+    padding:0 30px;
+
+    background: rgba(72, 219, 78, 0.5);
+    border-radius: 10px;
+}
