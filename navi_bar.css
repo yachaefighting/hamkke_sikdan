@@ -4,62 +4,49 @@
 * {
   background-color: #fbfbfb;
   text-decoration-line: none;
-
 }
 
+/*네비게이션바 글씨색 검정.
+나중에 페이지마다 회색글씨 검정글씨 설정 따로해줄것.*/
 #pagelink {
   color: #000000;
 }
 
+/*로고 오른쪽과 아래쪽을 띄워줌*/
 #logo {
   padding-right: 200px;
   padding-bottom: 8px;
 }
 
+/*뭔지 모르겠음. 근데 없으면 안됨*/
 #nav-underline {
   position: absolute;
-
   height: 4px;
-
   background-color: olive;
-
   transition: .6s ease-out;
 }
 
-#nav ul:first-child {
-  /*선택 li 진회색*/
-  color: #536152;
-}
-
+/*네비게이션바 전체 정렬*/
 #nav1 {
   text-align: center;
+  width: 1904px;
 }
 
+/*네비게이션바 예쁘게 만들어주는 부분*/
 #nav1>div ul {
   display: inline-block;
   list-style-type: none;
 }
 
-
-#nav div ul li:not(:first-of-type) {
-  color: #53615299;
-
-}
-
+/*기초대사량 왼쪽에 세로선*/
 #solidLeft {
   border-left: 1px solid #c4c4c4;
   padding-left: 10px;
 }
 
+/*네비게이션바 리스트*/
 #nav1 div>ul li {
-  /*
-    width: 201px;
-    height: 45px;
-    left: 216px;
-    top: 181px;
-  */
-
-  /* 오른쪽 패딩 값 */
+  /* 네비게이션바 오른쪽 세로선 */
   border-right: 1px solid #c4c4c4;
   padding-right: 10px;
 
@@ -86,16 +73,4 @@
 
   background: #0000004d;
   border-radius: 20px;
-}
-
-/*li 밑의 초록선*/
-.green_rect {
-
-  width: 247px;
-  height: 7px;
-
-  float: left;
-  padding: 0 30px;
-  background: #48db4e80;
-  border-radius: 10px;
 }
