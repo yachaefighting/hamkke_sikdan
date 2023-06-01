@@ -124,6 +124,10 @@
   padding-top: 80px;
 }
 
+input:focus {
+  outline: #48DB4E;
+}
+
 /*체크박스 체크하면 초록색으로 채워짐*/
 .shared-check {
   accent-color: #48DB4E;
@@ -164,7 +168,7 @@
 /*오른쪽 박스 기초대사량 p태그*/
 #basal {
   margin-top: 100px;
-  margin-left: 50px;
+  margin-left: 40px;
 }
 
 /*계산값 표시*/
