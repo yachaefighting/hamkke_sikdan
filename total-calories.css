@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&display=swap');
 
 * {
-  background-color: #fbfbfb;
   text-decoration-line: none;
   /*밑줄 안생기게*/
 }
@@ -31,6 +30,7 @@
 
 /*네비게이션바 전체 정렬과 페이지 크기 줄여도 그대로 있게*/
 #nav {
+  background-color: #fbfbfb;
   text-align: center;
   width: 1900px;
 }
@@ -77,14 +77,25 @@
 
 /*-------------------여기까지 네비게이션바 css--------------------------*/
 
-
+/*main 태그 넓이 지정*/
 .main {
-  width: 1920px;
+  width: 1900px;
 }
 
+/*총칼로리 표시 부분 속성*/
+.kcal {
+  text-align: center;
+  margin-top: 100px;
+
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+/*차트 속성*/
 .piechart {
   position: relative;
-  margin-top: 200px;
+  margin-top: 100px;
   margin-left: 800px;
   width: 300px;
   height: 300px;
@@ -92,8 +103,9 @@
   transition: 0.3s;
 }
 
+/*차트 중간 하얀 동그라미*/
 span.center {
-  background: #fbfbfb;
+  background: #ffffff;
   display: block;
   position: absolute;
   /*조상의 위치에서*/
@@ -103,8 +115,47 @@ span.center {
   height: 150px;
   border-radius: 50%;
   line-height: 100px;
-  font-size: 30px;
   transform: translate(-50%, -50%);
+}
+
+/*지방, 탄수화믈, 단백질 폰트 속성과 넓이 지정*/
+#shared-font {
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 600;
+  font-size: 20px;
+  width: 200px;
+}
+
+/*지방, 탄수화물, 단백질 글자색 초록으로*/
+.green {
+  color: #48DB4E;
+  margin: 0;
+}
+
+/*영양소 별 칼로리 표시되는 부분 마진 0으로*/
+#margin0 {
+  margin: 0;
+}
+
+/*지방 위치*/
+.fat {
+  position: absolute;
+  top: -10%;
+  left: -45%;
+}
+
+/*탄수화물 위치*/
+.carbohydrate {
+  position: absolute;
+  top: 35%;
+  left: 110%;
+}
+
+/*단백질 위치*/
+.protein {
+  position: absolute;
+  top: 200%;
+  left: -235%;
 }
 
 
