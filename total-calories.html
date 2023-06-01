@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>총칼로리</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(window).ready(function () {
+      var i = 0;
+      var func1 = setInterval(function () {
+        if (i < 50) {
+          color1(i);
+          i++;
+        } else if (i < 80) {
+          color2(i);
+          i++;
+        } else if (i < 101) {
+          color3(i);
+          i++;
+        } else {
+          clearInterval(func1);
+        }
+      }, 10);
+    });
+
+    function color1(i) {
+      $(".piechart").css({
+        "background": "conic-gradient(#5ade5f 0% " + i + "%, #ffffff " + i + "% 100%)"
+      });
+    }
+    function color2(i) {
+      $(".piechart").css({
+        "background": "conic-gradient(#5ade5f 0% 50%, #90e893 50% " + i + "%, #ffffff " + i + "% 100%)"
+      });
+    }
+    function color3(i) {
+      $(".piechart").css({
+        "background": "conic-gradient(#5ade5f 0% 50%, #90e893 50% 80%, #c5f1c7 80% " + i + "%, #ffffff " + i + "% 100%)"
+      });
+    }
+  </script>
+  <link rel="stylesheet" href="total-calories.css">
+</head>
+
+<body>
+
+  <!-- 
+    헤더는 나중에 페이지 다 만들고 나서 링크할 것.
+  -->
+  <header>
+    <div>
+      <nav id="nav">
+        <div>
+          <img id="logo" src="logo.jpg">
+          <ul>
+            <li id="solidLeft">
+              <a id="pagelink_gray" href="#">기초대사량</a>
+            </li>
+            <li>
+              <a id="pagelink_gray" href="#">활동대사량</a>
+            </li>
+            <li>
+              <a id="pagelink" href="#">총칼로리</a>
+            </li>
+            <li>
+              <a id="pagelink_gray" href="#">메뉴추천</a>
+            </li>
+          </ul>
+        </div>
+        <div id="nav-underline"></div>
+      </nav>
+    </div>
+    <hr id="hr">
+  </header>
+
+  <main>
+    <div class="main">
+      <div class="piechart">
+        <span class="center"></span>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div id="footer-content">
+      <p>© 2023 YachaeFighting</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
