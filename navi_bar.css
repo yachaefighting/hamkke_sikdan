@@ -1,15 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&display=swap');
 
-
 * {
   background-color: #fbfbfb;
   text-decoration-line: none;
+  /*밑줄 안생기게*/
 }
 
-/*네비게이션바 글씨색 검정.
-나중에 페이지마다 회색글씨 검정글씨 설정 따로해줄것.*/
+/*네비게이션바 현재 페이지 글씨색 검정.
+나중에 페이지마다 검정글씨 설정 따로해줄것.*/
 #pagelink {
   color: #000000;
+}
+
+/*네비게이션바 현재 페이지 아닌 나머지 글씨색 회색. 
+페이지마다 태그 수정 바람.*/
+#pagelink_gray {
+  color: #7a7a7a;
 }
 
 /*로고 오른쪽과 아래쪽을 띄워줌*/
@@ -18,36 +24,32 @@
   padding-bottom: 8px;
 }
 
-/*뭔지 모르겠음. 근데 없으면 안됨*/
+/*네비게이션바 아래 빈공간*/
 #nav-underline {
-  position: absolute;
   height: 4px;
-  background-color: olive;
-  transition: .6s ease-out;
 }
 
-/*네비게이션바 전체 정렬*/
-#nav1 {
+/*네비게이션바 전체 정렬과 페이지 크기 줄여도 그대로 있게*/
+#nav {
   text-align: center;
-  width: 1904px;
+  width: 1900px;
 }
 
-/*네비게이션바 예쁘게 만들어주는 부분*/
-#nav1>div ul {
+/*네비게이션바 리스트처럼 안보이게 예쁘게 만들어주는 부분*/
+#nav div ul {
   display: inline-block;
   list-style-type: none;
 }
 
 /*기초대사량 왼쪽에 세로선*/
 #solidLeft {
-  border-left: 1px solid #c4c4c4;
+  border-left: 1px solid #7a7a7a;
   padding-left: 10px;
 }
 
-/*네비게이션바 리스트*/
-#nav1 div>ul li {
-  /* 네비게이션바 오른쪽 세로선 */
-  border-right: 1px solid #c4c4c4;
+/*네비게이션바 오른쪽 세로선과 나머지 속성들*/
+#nav div ul li {
+  border-right: 1px solid #7a7a7a;
   padding-right: 10px;
 
   float: left;
@@ -60,17 +62,39 @@
   font-weight: 600;
   font-size: 25px;
   line-height: 42px;
-  text-align: center;
-  cursor: pointer;
 }
 
-/*navigator 구분선*/
-#rect1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 1px;
+/*마우스 가져가면 검정색으로 색 바뀜*/
+#nav div ul li a:hover {
+  color: #000000;
+}
 
-  background: #0000004d;
-  border-radius: 20px;
+/*네비게이션바 아래 메인 부분과 구분하는 가로선*/
+#hr {
+  margin: 0;
+}
+
+
+/*-------------------여기까지 네비게이션바 css--------------------------*/
+
+
+
+/*이거 삭제하고 여기 밑에다가 바디 css 넣으세요*/
+
+
+
+
+
+
+
+/*밑으로 건드리지 말것*/
+/*-----------------------여기까지 바디 css------------------------------*/
+
+
+/*푸터 스타일.*/
+#footer-content {
+  position: absolute;
+  bottom: 0;
+  width: 1900px;
+  text-align: center;
 }
