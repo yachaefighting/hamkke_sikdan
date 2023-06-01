@@ -3,15 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>기초대사량2</title>
-
+  <title>기초대사량</title>
   <link rel="stylesheet" href="기초.css">
 </head>
 
 <body>
   <header>
     <div>
-      <nav id="nav1">
+      <nav id="nav">
         <div>
           <img id="logo" src="logo.jpg">
           <ul>
@@ -19,13 +18,13 @@
               <a id="pagelink" href="#">기초대사량</a>
             </li>
             <li>
-              <a id="pagelink" href="#">활동대사량</a>
+              <a id="pagelink_gray" href="#">활동대사량</a>
             </li>
             <li>
-              <a id="pagelink" href="#">총칼로리</a>
+              <a id="pagelink_gray" href="#">총칼로리</a>
             </li>
             <li>
-              <a id="pagelink" href="#">메뉴추천</a>
+              <a id="pagelink_gray" href="#">메뉴추천</a>
             </li>
           </ul>
         </div>
@@ -41,26 +40,72 @@
         <label id="name">
           <p>체중</p>
         </label>
-        <input id="formStyle" type="number" name="kg"> <br /><br />
+        <input class="shared-style" id="weight" type="number" name="kg"> <br /><br />
         <label id="name">
-          <p>체지방률</p>
+          <p>신장</p>
         </label>
-        <input id="formStyle" type="number" name="bodyFat">
+        <input class="shared-style" id="height" type="number" name="cm">
         <label id="name">
-          <p id="m">근육량</p>
+          <p id="age">나이</p>
         </label>
-        <input id="formStyle" type="number" name="muscleMass"><br /><br />
-        <label id="gender">성별</label>
-        남&nbsp;
-        <input id="check" type="checkbox" value="Male">
-        &nbsp; &nbsp;
-        여&nbsp;
-        <input id="check" type="checkbox" value="Female">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <button type="submit">입력</button>
+        <input class="shared-style" id="old" type="number" name="year"><br /><br />
+        <label id="gender">성별</label>남&nbsp;
+        <input class="shared-check" id="checkMale" type="checkbox" value="Male"> &nbsp; &nbsp;여&nbsp;
+        <input class="shared-check" id="checkFemale" type="checkbox" value="Female">
+        <button id="submitButton" type="submit" onclick="calculate(event)">입력</button>
+
+        <script>
+          //기초대사량 계산 함수
+          function calculate(event) {
+            event.preventDefault();
+
+
+            var error;
+
+            var weight = document.getElementById("weight").value;
+            var height = document.getElementById("height").value;
+            var old = document.getElementById("old").value;
+
+            var checkMale = document.getElementById("checkMale");
+            var checkFemale = document.getElementById("checkFemale");
+
+            if (checkMale.checked && checkFemale.checked) {
+              error = "체크 박스는 하나만 선택해주세요";
+              document.getElementById("error").innerHTML = error;
+              document.getElementById("output").innerHTML = "";
+            }
+            else {
+              var output = "";
+
+              if (checkMale.checked) {
+                output = ((88.4 + 13.4 * weight) + (4.8 * height) - (5.68 * old)).toFixed(2) + " kcal";
+                document.getElementById("output").innerHTML = output;
+              }
+              else if (checkFemale.checked) {
+                output = ((447.6 + 9.25 * weight) + (3.1 * height) - (4.33 * old)).toFixed(2) + " kcal";
+                document.getElementById("output").innerHTML = output;
+              }
+            }
+          }
+
+          // 체크박스 상태 변경 시 출력 메시지 초기화
+          var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+          checkboxes.forEach(function (checkbox) {
+            checkbox.addEventListener('change', clearOutput);
+          });
+
+          function clearOutput() {
+            document.getElementById("error").innerHTML = "";
+          }
+        </script>
       </form>
 
-      <aside>&nbsp;</aside>
+      <div id="aside">
+        <p id="basal">기초대사량</p>
+        <p id="error"></p>
+        <p id="output"></p>
+      </div>
     </div>
   </main>
 
