@@ -6,6 +6,14 @@
   <title>총칼로리</title>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
+
+    var jibangKcal;
+    var jibangG
+    var tansuKcal;
+    var tansuG;
+    var danbeakKcal;
+    var danbeakG;
+
     $(window).ready(function () {
       var i = 0;
       var func1 = setInterval(function () {
@@ -22,6 +30,20 @@
           clearInterval(func1);
         }
       }, 10);
+
+      var output = "총 " + localStorage.getItem('output') + "kcal";
+      var kcalElement = document.getElementsByClassName("kcal")[0];
+      kcalElement.innerHTML = output; //없으면 안돼
+
+
+      jibangKcal = output * 0.2;
+      jibangG = jibangKcal / 9;
+
+      tansuKcal = output * 0.5;
+      tansuG = tansuKcal / 4;
+
+      danbeakKcal = output * 0.3;
+      danbeakG = danbeakKcal / 4;
     });
 
     function color1(i) {
@@ -39,6 +61,7 @@
         "background": "conic-gradient(#5ade5f 0% 50%, #90e893 50% 80%, #c5f1c7 80% " + i + "%, #ffffff " + i + "% 100%)"
       });
     }
+
   </script>
   <link rel="stylesheet" href="total-calories.css">
 </head>
@@ -55,7 +78,7 @@
           <img id="logo" src="logo.jpg">
           <ul>
             <li id="solidLeft">
-              <a id="pagelink_gray" href="#">기초대사량</a>
+              <a id="pagelink_gray" href="../기초/basal-metabolism.html">기초대사량</a>
             </li>
             <li>
               <a id="pagelink_gray" href="#">활동대사량</a>
@@ -76,7 +99,7 @@
 
   <main>
     <div class="main">
-      <div class="kcal">총 ~~ kcal 섭취</div>
+      <div class="kcal"></div>
       <div class="piechart">
         <span class="center"></span>
         <div id="shared-font" class="fat">
