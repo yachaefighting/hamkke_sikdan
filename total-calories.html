@@ -31,19 +31,26 @@
         }
       }, 10);
 
-      var output = "총 " + localStorage.getItem('output') + "kcal";
+      var output = parseFloat(localStorage.getItem('output'));
+      var outputOut = "총 " + parseFloat(localStorage.getItem('output')) + "kcal";
       var kcalElement = document.getElementsByClassName("kcal")[0];
-      kcalElement.innerHTML = output; //없으면 안돼
+      kcalElement.innerHTML = outputOut; //없으면 안돼
 
 
-      jibangKcal = output * 0.2;
+      jibangKcal = parseFloat(output) * 0.2;
       jibangG = jibangKcal / 9;
+      var jijiElement = document.getElementById("jiji");
+      jijiElement.innerHTML = jibangKcal.toFixed(2) + " Kcal (" + jibangG.toFixed(2) + " g)";
 
-      tansuKcal = output * 0.5;
+      tansuKcal = parseFloat(output) * 0.5;
       tansuG = tansuKcal / 4;
+      var tantanElement = document.getElementById("tantan");
+      tantanElement.innerHTML = tansuKcal.toFixed(2) + " Kcal (" + tansuG.toFixed(2) + " g)";
 
-      danbeakKcal = output * 0.3;
+      danbeakKcal = parseFloat(output) * 0.3;
       danbeakG = danbeakKcal / 4;
+      var dandanElement = document.getElementById("dandan");
+      dandanElement.innerHTML = danbeakKcal.toFixed(2) + " Kcal (" + danbeakG.toFixed(2) + " g)";
     });
 
     function color1(i) {
@@ -104,14 +111,14 @@
         <span class="center"></span>
         <div id="shared-font" class="fat">
           <p class="green">지방</p>
-          <p id="margin0">~~~kcal (~~g)</p>
+          <p id="margin0"><span id="jiji"></span></p>
         </div>
         <div id="shared-font" class="carbohydrate">
           <p class="green">탄수화물</p>
-          <p id="margin0">~~~kcal (~~g)</p>
+          <p id="margin0"><span id="tantan"></span></p>
           <div id="shared-font" class="protein">
             <p class="green">단백질</p>
-            <p id="margin0">~~~kcal (~~g)</p>
+            <p id="margin0"><span id="dandan"></span></p>
           </div>
         </div>
       </div>
