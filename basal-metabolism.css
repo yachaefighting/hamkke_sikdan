@@ -90,6 +90,7 @@
   height: 330px;
   margin-top: 120px;
   margin-left: 500px;
+  margin-bottom: 200px;
   float: left;
 }
 
@@ -155,6 +156,8 @@ input:focus {
   width: 400px;
   height: 370px;
   margin-top: 200px;
+  margin-right: 490px;
+  margin-bottom: 199px;
   float: left;
 
   border: 2px solid #48DB4E;
@@ -194,8 +197,6 @@ input:focus {
 
 /*푸터 스타일.*/
 #footer-content {
-  position: absolute;
-  bottom: 0;
   width: 1900px;
   text-align: center;
 }
