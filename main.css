@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&display=swap');
+
+* {
+  text-decoration-line: none;
+  /*밑줄 안생기게*/
+}
+
+/*네비게이션바 현재 페이지 아닌 나머지 글씨색 회색. 
+페이지마다 태그 수정 바람.*/
+#pagelink {
+  color: #000000;
+}
+
+/*네비게이션바 아래 빈공간*/
+#nav-underline {
+  height: 4px;
+}
+
+/*네비게이션바 전체 정렬과 페이지 크기 줄여도 그대로 있게*/
+#nav {
+  text-align: right;
+  margin: 0;
+  width: 1240px;
+}
+
+/*네비게이션바 리스트처럼 안보이게 예쁘게 만들어주는 부분*/
+#nav div ul {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 25px;
+}
+
+/*기초대사량 왼쪽에 세로선*/
+#solidLeft {
+  padding-left: 10px;
+}
+
+/*네비게이션바 오른쪽 세로선과 나머지 속성들*/
+#nav div ul li {
+  padding-right: 10px;
+
+  float: left;
+  line-height: 80px;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  font-family: 'Noto Serif KR', serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 42px;
+}
+
+/*마우스 가져가면 검정색으로 색 바뀜*/
+#nav div ul li a:hover {
+  text-decoration: underline;
+}
+
+
+/*-------------------여기까지 네비게이션바 css--------------------------*/
+
+body {
+  margin: 0;
+}
+
+#su {
+  width: 1900px;
+  display: flex;
+  text-align: center;
+}
+
+#title {
+  color: #43c547;
+  width: 1240px;
+  text-align: center;
+  padding-top: 90px;
+  margin: 0;
+
+  font-family: 'Noto Serif KR', serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 50px;
+}
+
+#content {
+  text-align: center;
+  padding-top: 20px;
+
+  font-family: 'Noto Serif KR', serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/*밑으로 건드리지 말것*/
+/*-----------------------여기까지 바디 css------------------------------*/
+
+
+/*푸터 스타일.*/
+#footer-content {
+  margin-top: 106px;
+  width: 385px;
+}
