@@ -32,7 +32,7 @@
       }, 10);
 
       var output = parseFloat(localStorage.getItem('output'));
-      var outputOut = "총 " + parseFloat(localStorage.getItem('output')) + "kcal";
+      var outputOut = "총 " + parseFloat(localStorage.getItem('output')) + " kcal";
       var kcalElement = document.getElementsByClassName("kcal")[0];
       kcalElement.innerHTML = outputOut; //없으면 안돼
 
@@ -40,17 +40,17 @@
       jibangKcal = parseFloat(output) * 0.2;
       jibangG = jibangKcal / 9;
       var jijiElement = document.getElementById("jiji");
-      jijiElement.innerHTML = jibangKcal.toFixed(2) + " Kcal (" + jibangG.toFixed(2) + " g)";
+      jijiElement.innerHTML = jibangKcal.toFixed(2) + " kcal (" + jibangG.toFixed(2) + " g)";
 
       tansuKcal = parseFloat(output) * 0.5;
       tansuG = tansuKcal / 4;
       var tantanElement = document.getElementById("tantan");
-      tantanElement.innerHTML = tansuKcal.toFixed(2) + " Kcal (" + tansuG.toFixed(2) + " g)";
+      tantanElement.innerHTML = tansuKcal.toFixed(2) + " kcal (" + tansuG.toFixed(2) + " g)";
 
       danbeakKcal = parseFloat(output) * 0.3;
       danbeakG = danbeakKcal / 4;
       var dandanElement = document.getElementById("dandan");
-      dandanElement.innerHTML = danbeakKcal.toFixed(2) + " Kcal (" + danbeakG.toFixed(2) + " g)";
+      dandanElement.innerHTML = danbeakKcal.toFixed(2) + " kcal (" + danbeakG.toFixed(2) + " g)";
     });
 
     function color1(i) {
@@ -82,7 +82,9 @@
     <div>
       <nav id="nav">
         <div>
-          <img id="logo" src="logo.jpg">
+          <a id="pagelink_gray" href="../메인/main.html">
+            <img id="logo" src="logo.jpg">
+          </a>
           <ul>
             <li id="solidLeft">
               <a id="pagelink_gray" href="../기초/basal-metabolism.html">기초대사량</a>
@@ -91,7 +93,7 @@
               <a id="pagelink_gray" href="#">활동대사량</a>
             </li>
             <li>
-              <a id="pagelink" href="#">총칼로리</a>
+              <a id="pagelink" href="./total-calories.html">총칼로리</a>
             </li>
             <li>
               <a id="pagelink_gray" href="#">메뉴추천</a>
