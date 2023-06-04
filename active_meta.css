@@ -86,8 +86,8 @@
   font-size: 23px;
 
   width: 500px;
-  height: 370px;
-  margin-top: 200px;
+  height: 450px;
+  margin-top: 150px;
   margin-left: 500px;
   margin-right: 50px;
   float: left;
@@ -99,8 +99,8 @@
 #right_side {
   position: relative;
   width: 350px;
-  height: 370px;
-  margin-top: 200px;
+  height: 450px;
+  margin-top: 150px;
   margin-right: 490px;
   margin-left: 50;
   float: left;
@@ -116,14 +116,15 @@
 #label_1 {
   display: block;
   margin-left: 195px;
-  margin-top: 30px;
+  margin-top: 55px;
+  margin-bottom: 40px;
 }
 
 #label_2 {
   display: block;
   margin-left: 195px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 55px;
+  margin-bottom: 40px;
 }
 
 #activityForm select {
@@ -131,9 +132,13 @@
   font-size: 18px;
   width: 80%;
   height: 40px;
-  margin-left: 47px;
-  margin-top: 40px;
+  margin-left: 50px;
+}
 
+#divider1 {
+  border-top: 2px solid #48DB4E;
+  width: 450px;
+  margin-top: 50px;
 }
 
 #activityForm input[type="number"] {
@@ -142,15 +147,17 @@
   font-weight: bolder;
   width: 300px;
   height: 30px;
-  margin-left: 47px;
+  margin-left: 50px;
   margin-bottom: 50px;
 }
 
 #activityForm button {
   font-family: 'Noto Serif KR', serif;
+  font-size: 15px;
   background-color: #48DB4E;
+
   width: 70px;
-  height: 35px;
+  height: 36px;
 
   margin-left: 15px;
 
@@ -158,14 +165,28 @@
   border: #48DB4E;
 }
 
-#total {
+#activityList li {
+  margin-bottom: 12px;
+}
+
+#totalTime {
+  margin-top: 20px;
+  margin-bottom: 30px;
   margin-left: 125px;
 }
 
-/*푸터 스타일.*/
+/*활동 대사량으로 고치면 left를 조금 줄여야 할 듯.*/
+#active_metabolism {
+  margin-top: 30px;
+  margin-left: 110px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/*푸터 스타일. 일단 통일해 봤는데 어떤지*/
 #footer-content {
   position: absolute;
-  bottom: 0;
+  bottom: 100px;
   width: 1900px;
   text-align: center;
 }

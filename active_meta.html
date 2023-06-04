@@ -9,27 +9,25 @@
 
 
 <body>
-
-  <!-- 
-    헤더는 나중에 페이지 다 만들고 나서 링크할 것.
-  -->
   <header>
     <div>
       <nav id="nav">
         <div>
-          <img id="logo" src="logo.jpg">
+          <a id="pagelink_gray" href="../메인/main.html">
+            <img id="logo" src="logo.jpg">
+          </a>
           <ul>
             <li id="solidLeft">
-              <a id="pagelink_gray" href="#">기초대사량</a>
+              <a id="pagelink_gray" href="../기초/basal-metabolism.html">기초대사량</a>
             </li>
             <li>
-              <a id="pagelink" href="#">활동대사량</a>
+              <a id="pagelink" href="./active_meta.html">활동대사량</a>
             </li>
             <li>
-              <a id="pagelink_gray" href="#">총칼로리</a>
+              <a id="pagelink_gray" href="../총칼로리/total-calories.html">총칼로리</a>
             </li>
             <li>
-              <a id="pagelink_gray" href="#">메뉴추천</a>
+              <a id="pagelink_gray" href="../메뉴/menu.html">메뉴추천</a>
             </li>
           </ul>
         </div>
@@ -61,6 +59,7 @@
                 <option value="근력 운동">근력 운동</option>
               </select>
             </div>
+            <hr id="divider1">
             <div id="active_time">
               <label id="label_2" for="hours">활동 시간</label>
 
@@ -71,12 +70,12 @@
           </div>
           <div id="right_side">
             <ul id="activityList"></ul>
-            <div id="total">
-              <p id="totalTime"></p>
+            <p id="totalTime"></p>
+            <div id="active_metabolism">
               <p id="totalweight"></p>
             </div>
           </div>
-        </form>s
+        </form>
       </div>
 
 
@@ -118,15 +117,15 @@
             } else if (activity === '서서하는 업무') {
               weight = 2.2;
             } else if (activity === '걷기') {
-              weight = 3.2;
+              weight = 2.8;
             } else if (activity === '가벼운 휴식') {
               weight = 1.4;
             } else if (activity === '집안일') {
               weight = 2.3;
             } else if (activity === '유산소 운동') {
-              weight = 4.2;
+              weight = 4.0;
             } else if (activity === '근력 운동') {
-              weight = 4.5;
+              weight = 4.2;
             }
 
             const activityCost = weight * hours;
