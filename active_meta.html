@@ -46,7 +46,7 @@
         <form id="activityForm">
           <div id="left_side">
             <div id="active_select">
-              <label for="activity">활동 선택</label>
+              <label id="label_1" for="activity">활동 선택</label>
               <select id="activity">
                 <option value="취침">취침</option>
                 <option value="자차 출근">자차 출근</option>
@@ -58,14 +58,15 @@
                 <option value="가벼운 휴식">가벼운 휴식(TV시청, 대화)</option>
                 <option value="집안일">집안일</option>
                 <option value="유산소 운동">유산소 운동</option>
+                <option value="근력 운동">근력 운동</option>
               </select>
             </div>
             <div id="active_time">
-              <label for="hours">활동 시간 (시간):</label>
+              <label id="label_2" for="hours">활동 시간</label>
 
               <input type="number" id="hours" value="1">
 
-              <button type="submit">활동 추가</button>
+              <button type="submit">추가</button>
             </div>
           </div>
           <div id="right_side">
@@ -75,7 +76,7 @@
               <p id="totalweight"></p>
             </div>
           </div>
-        </form>
+        </form>s
       </div>
 
 
@@ -103,30 +104,32 @@
 
             totalTimeElement.textContent = '총 시간: ' + totalHours + '시간';
 
-            let price = 0;
+            letweight = 0;
             if (activity === '취침') {
-              price = 1;
+              weight = 1;
             } else if (activity === '자차 출근') {
-              price = 2;
+              weight = 2;
             } else if (activity === '대중교통 출근') {
-              price = 1.2;
+              weight = 1.3;
             } else if (activity === '식사') {
-              price = 1.5;
-            } else if (activity === '앉아 있기') {
-              price = 1.5;
-            } else if (activity === '서 있기') {
-              price = 2.2;
+              weight = 1.5;
+            } else if (activity === '좌식 업무') {
+              weight = 1.5;
+            } else if (activity === '서서하는 업무') {
+              weight = 2.2;
             } else if (activity === '걷기') {
-              price = 3.2;
+              weight = 3.2;
             } else if (activity === '가벼운 휴식') {
-              price = 1.4;
+              weight = 1.4;
             } else if (activity === '집안일') {
-              price = 2.3;
+              weight = 2.3;
             } else if (activity === '유산소 운동') {
-              price = 4.2;
+              weight = 4.2;
+            } else if (activity === '근력 운동') {
+              weight = 4.5;
             }
 
-            const activityCost = price * hours;
+            const activityCost = weight * hours;
             totalweight += activityCost;
 
             if (totalHours === 24) {
