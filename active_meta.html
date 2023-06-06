@@ -13,21 +13,21 @@
     <div>
       <nav id="nav">
         <div>
-          <a id="pagelink_gray" href="../메인/main.html">
+          <a id="pagelink_gray" href="main.html">
             <img id="logo" src="logo.jpg">
           </a>
           <ul>
             <li id="solidLeft">
-              <a id="pagelink_gray" href="../기초/basal-metabolism.html">기초대사량</a>
+              <a id="pagelink_gray" href="basal-metabolism.html">기초대사량</a>
             </li>
             <li>
-              <a id="pagelink" href="./active_meta.html">활동대사량</a>
+              <a id="pagelink" href="active_meta.html">활동대사량</a>
             </li>
             <li>
-              <a id="pagelink_gray" href="../총칼로리/total-calories.html">총칼로리</a>
+              <a id="pagelink_gray" href="total-calories.html">총칼로리</a>
             </li>
             <li>
-              <a id="pagelink_gray" href="../메뉴/menu.html">메뉴추천</a>
+              <a id="pagelink_gray" href="menu.html">메뉴추천</a>
             </li>
           </ul>
         </div>
@@ -50,6 +50,7 @@
                 <option value="자차 출근">자차 출근</option>
                 <option value="대중교통 출근">대중교통 출근</option>
                 <option value="식사">식사</option>
+                <option value="누워 있기">누워 있기</option>
                 <option value="앉아 있기">앉아 있기(좌식 업무)</option>
                 <option value="서 있기">서 있기</option>
                 <option value="걷기">걷기</option>
@@ -103,25 +104,27 @@
 
             totalTimeElement.textContent = '총 시간: ' + totalHours + '시간';
 
-            letweight = 0;
+            let weight = 0;
             if (activity === '취침') {
               weight = 1;
             } else if (activity === '자차 출근') {
-              weight = 2;
+              weight = 1.8;
             } else if (activity === '대중교통 출근') {
-              weight = 1.3;
+              weight = 1.2;
             } else if (activity === '식사') {
               weight = 1.5;
-            } else if (activity === '좌식 업무') {
-              weight = 1.5;
-            } else if (activity === '서서하는 업무') {
-              weight = 2.2;
+            } else if (activity === '앉아 있기') {
+              weight = 1.4;
+            } else if (activity === '서 있기') {
+              weight = 2.0;
             } else if (activity === '걷기') {
-              weight = 2.8;
+              weight = 2.4;
             } else if (activity === '가벼운 휴식') {
               weight = 1.4;
+            } else if (activity === '누워 있기') {
+              weight = 1.2;
             } else if (activity === '집안일') {
-              weight = 2.3;
+              weight = 2.2;
             } else if (activity === '유산소 운동') {
               weight = 4.0;
             } else if (activity === '근력 운동') {
@@ -136,7 +139,16 @@
               totalweight = totalweight / 24;
               totalweight = totalweight * 100;
               totalweight = parseInt(totalweight) / 100;
-              totalweightElement.textContent = '활동계수: ' + totalweight;
+              console.log(totalweight);
+
+              var base = localStorage.getItem('base_meta');
+              active = totalweight * parseFloat(base);
+              active = active * 100;
+              active = parseInt(active) / 100;
+              localStorage.setItem('active_meta', active);
+
+
+              totalweightElement.textContent = '활동대사량: ' + active;
             }
           } else {
             alert('24시간을 초과하여 입력할 수 없습니다.');
