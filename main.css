@@ -65,6 +65,7 @@ body {
 
 #su {
   width: 1900px;
+  height: 900px;
   display: flex;
   text-align: right;
 }
