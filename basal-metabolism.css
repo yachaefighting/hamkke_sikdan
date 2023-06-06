@@ -197,6 +197,8 @@ input:focus {
 
 /*푸터 스타일.*/
 #footer-content {
+  position: absolute;
+  bottom: 120px;
   width: 1900px;
   text-align: center;
 }
