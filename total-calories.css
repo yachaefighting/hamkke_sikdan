@@ -167,7 +167,7 @@ span.center {
 /*푸터 스타일.*/
 #footer-content {
   position: absolute;
-  bottom: 0;
+  bottom: 120px;
   width: 1900px;
   text-align: center;
 }

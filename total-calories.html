@@ -13,6 +13,7 @@
     var tansuG;
     var danbeakKcal;
     var danbeakG;
+    var substraction;
 
     $(window).ready(function () {
       var i = 0;
@@ -31,23 +32,24 @@
         }
       }, 10);
 
-      var output = parseFloat(localStorage.getItem('output'));
-      var outputOut = "총 " + parseFloat(localStorage.getItem('output')) + " kcal";
+      var active_meta = parseFloat(localStorage.getItem('active_meta')) * 0.8;
+      active_meta = parseInt(active_meta * 100) / 100;
+      var outputOut = "총 " + active_meta + " kcal";
       var kcalElement = document.getElementsByClassName("kcal")[0];
       kcalElement.innerHTML = outputOut; //없으면 안돼
 
 
-      jibangKcal = parseFloat(output) * 0.2;
+      jibangKcal = parseFloat(active_meta) * 0.2;
       jibangG = jibangKcal / 9;
       var jijiElement = document.getElementById("jiji");
       jijiElement.innerHTML = jibangKcal.toFixed(2) + " kcal (" + jibangG.toFixed(2) + " g)";
 
-      tansuKcal = parseFloat(output) * 0.5;
+      tansuKcal = parseFloat(active_meta) * 0.55;
       tansuG = tansuKcal / 4;
       var tantanElement = document.getElementById("tantan");
       tantanElement.innerHTML = tansuKcal.toFixed(2) + " kcal (" + tansuG.toFixed(2) + " g)";
 
-      danbeakKcal = parseFloat(output) * 0.3;
+      danbeakKcal = parseFloat(active_meta) * 0.25;
       danbeakG = danbeakKcal / 4;
       var dandanElement = document.getElementById("dandan");
       dandanElement.innerHTML = danbeakKcal.toFixed(2) + " kcal (" + danbeakG.toFixed(2) + " g)";
@@ -60,12 +62,12 @@
     }
     function color2(i) {
       $(".piechart").css({
-        "background": "conic-gradient(#5ade5f 0% 50%, #90e893 50% " + i + "%, #ffffff " + i + "% 100%)"
+        "background": "conic-gradient(#5ade5f 0% 55%, #90e893 55% " + i + "%, #ffffff " + i + "% 100%)"
       });
     }
     function color3(i) {
       $(".piechart").css({
-        "background": "conic-gradient(#5ade5f 0% 50%, #90e893 50% 80%, #c5f1c7 80% " + i + "%, #ffffff " + i + "% 100%)"
+        "background": "conic-gradient(#5ade5f 0% 55%, #90e893 55% 80%, #c5f1c7 80% " + i + "%, #ffffff " + i + "% 100%)"
       });
     }
 
@@ -74,10 +76,6 @@
 </head>
 
 <body>
-
-  <!-- 
-    헤더는 나중에 페이지 다 만들고 나서 링크할 것.
-  -->
   <header>
     <div>
       <nav id="nav">
@@ -90,13 +88,13 @@
               <a id="pagelink_gray" href="../기초/basal-metabolism.html">기초대사량</a>
             </li>
             <li>
-              <a id="pagelink_gray" href="#">활동대사량</a>
+              <a id="pagelink_gray" href="../활동/active_meta.html">활동대사량</a>
             </li>
             <li>
               <a id="pagelink" href="./total-calories.html">총칼로리</a>
             </li>
             <li>
-              <a id="pagelink_gray" href="#">메뉴추천</a>
+              <a id="pagelink_gray" href="../메뉴/menu.html">메뉴추천</a>
             </li>
           </ul>
         </div>
