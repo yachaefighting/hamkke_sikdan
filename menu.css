@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&display=swap');
+
+* {
+    background-color: #fbfbfb;
+    text-decoration-line: none;
+    /*밑줄 안생기게*/
+}
+
+/*네비게이션바 현재 페이지 글씨색 검정.
+나중에 페이지마다 검정글씨 설정 따로해줄것.*/
+#pagelink {
+    color: #000000;
+}
+
+/*네비게이션바 현재 페이지 아닌 나머지 글씨색 회색. 
+페이지마다 태그 수정 바람.*/
+#pagelink_gray {
+    color: #7a7a7a;
+}
+
+/*로고 오른쪽과 아래쪽을 띄워줌*/
+#logo {
+    padding-right: 200px;
+    padding-bottom: 8px;
+}
+
+/*네비게이션바 아래 빈공간*/
+#nav-underline {
+    height: 4px;
+}
+
+/*네비게이션바 전체 정렬과 페이지 크기 줄여도 그대로 있게*/
+#nav {
+    text-align: center;
+    width: 1900px;
+}
+
+/*네비게이션바 리스트처럼 안보이게 예쁘게 만들어주는 부분*/
+#nav div ul {
+    display: inline-block;
+    list-style-type: none;
+}
+
+/*기초대사량 왼쪽에 세로선*/
+#solidLeft {
+    border-left: 1px solid #7a7a7a;
+    padding-left: 10px;
+}
+
+/*네비게이션바 오른쪽 세로선과 나머지 속성들*/
+#nav div ul li {
+    border-right: 1px solid #7a7a7a;
+    padding-right: 10px;
+
+    float: left;
+    line-height: 80px;
+    padding-left: 75px;
+    padding-right: 75px;
+
+    font-family: 'Noto Serif KR', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 42px;
+}
+
+/*마우스 가져가면 검정색으로 색 바뀜*/
+#nav div ul li a:hover {
+    color: #000000;
+}
+
+/*네비게이션바 아래 메인 부분과 구분하는 가로선*/
+#hr {
+    margin: 0;
+}
+
+
+
+#contents {
+    width: 1900px;
+}
+
+#recommendation {
+
+    margin-left: 882px;
+    margin-top: 100px;
+    margin-bottom: 60px;
+
+    font-family: 'Noto Serif KR', serif;
+    font-size: 30px;
+    font-weight: bolder;
+
+}
+
+#menu1 {
+    font-family: 'Noto Serif KR', serif;
+
+    border: 2px solid #48DB4E;
+    border-radius: 8px;
+
+    width: 250px;
+    height: 370px;
+    margin-left: 500px;
+    margin-bottom: 200px;
+    float: left;
+}
+
+#blank {
+    position: relative;
+    width: 63px;
+    height: 330px;
+    float: left
+}
+
+
+#menu2 {
+    font-family: 'Noto Serif KR', serif;
+
+    border: 2px solid #37a73b;
+    border-radius: 8px;
+
+    width: 250px;
+    height: 370px;
+    margin-bottom: 200px;
+    float: left;
+}
+
+#menu3 {
+    font-family: 'Noto Serif KR', serif;
+
+    border: 2px solid #28792a;
+    border-radius: 8px;
+
+    width: 250px;
+    height: 370px;
+    margin-bottom: 200px;
+    float: left;
+}
+
+#menu-title1 {
+    text-align: center;
+
+    margin-bottom: px;
+    margin-top: 40px;
+    margin-left: 25px;
+
+    border-bottom: 2px solid #48DB4E;
+    width: 80%;
+
+    padding-bottom: 25px;
+
+}
+
+#menu-title1 a {
+    color: black;
+}
+
+#menu-title2 {
+    text-align: center;
+
+    margin-bottom: px;
+    margin-top: 40px;
+    margin-left: 25px;
+
+    border-bottom: 2px solid #37a73b;
+    width: 80%;
+
+    padding-bottom: 25px;
+
+}
+
+#menu-title3 {
+    text-align: center;
+
+    margin-bottom: px;
+    margin-top: 40px;
+    margin-left: 25px;
+
+    border-bottom: 2px solid #28792a;
+    width: 80%;
+
+    padding-bottom: 25px;
+
+}
+
+
+#nutrient {
+    list-style-type: none;
+}
+
+#nutrient li {
+    text-align: center;
+    padding-left: 0px;
+    margin-left: -36px;
+    margin-top: 30px;
+}
+
+#recipt {
+    text-align: center;
+    font-weight: bold;
+
+    font-size: 16px;
+    margin-top: 40px;
+}
+
+#recipt_a1 {
+    color: #48DB4E;
+}
+
+#recipt_a2 {
+    color: #37a73b;
+}
+
+#recipt_a3 {
+    color: #28792a;
+}
+
+/*푸터 스타일.*/
+#footer-content {
+    position: absolute;
+    bottom: 120px;
+    width: 1900px;
+    text-align: center;
+}
